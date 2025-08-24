@@ -37,7 +37,7 @@ const Home = () => {
                                 <Link class="nav-link text_White active px-3 py-2 me-4 " aria-current="page" href="#">Home</Link>
                             </li>
                             <li class="nav-item">
-                                <Link class="nav-link text_white px-3 py-2 me-4" href="#">Proudct</Link>
+                                <Link class="nav-link text_white px-3 py-2 me-4" href="#">Product</Link>
                             </li>
                             <li class="nav-item">
                                 <Link class="nav-link text_white px-3 py-2 me-4" href="#">Services</Link>
