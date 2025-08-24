@@ -316,7 +316,7 @@ const Home = () => {
                     <div className='col-2'>
                         <p className='text_bluegray font_secondary fs_17 mb-0 text-start'>Help</p>
                         <ul className='text-start ps-0'>
-                            <li className='fs_12'>Help</li>
+                            <li className='fs_12 abcd'>Help</li>
                             <li className='fs_12'>Support</li>
                             <li className='fs_12'>Query</li>
                         </ul>
