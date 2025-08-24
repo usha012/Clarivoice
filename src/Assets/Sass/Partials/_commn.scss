@@ -1,0 +1,163 @@
+@import "./mixin";
+// navbar
+
+.main_navbar{
+  .nav_logo{
+    width: 10rem;
+    height: auto;
+    object-fit: contain;
+    overflow: hidden;
+  }
+
+  .nav-link{
+    border-bottom: 1px solid transparent;
+    &.active, &:hover{
+      color: $text-white;
+      border-bottom: 1px solid white;
+    }
+    &:focus{
+      color: $text-white;
+      // border-bottom: transparent !important;
+    }
+  } 
+}
+// home
+.hero_section{
+  padding-top:160px;
+  padding-bottom: 195px;
+}
+.hero_bg_right{
+  aspect-ratio: 4/3;
+  height: 100%;
+  object-fit: contain;
+  overflow: hidden;
+}
+// feature
+.feature_title{
+  font-size: 2.813rem;
+  line-height: 1;
+}
+.feature_card{
+  .card{
+    border-radius: 0.938rem;
+    border:none;
+    padding:1.25rem 2.65rem;
+    .icon {
+      width: 67px;
+      margin-right: 1.25rem;
+    }
+
+    .card-text {
+      font-size: 1.125rem;
+    }
+  }
+ 
+}
+.company_logo{
+  width:auto;
+  height: 40px;
+}
+// testimonial
+.testimonial{
+  .title{
+    line-height:1.217;
+  }
+  .testimonial_img {
+      width: 100%;              /* full width of parent */
+      max-width: 396px;         /* won’t stretch bigger than 396px */
+      aspect-ratio: 396 / 460;
+      margin-right: 2.438rem;
+      // overflow: hidden;
+      .customer_img, .background {
+        border-radius: 15px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .bg_cover {
+        left: -68px;
+        z-index: -1;
+        top: 70px;
+      }
+      .dots{
+        aspect-ratio: 1;
+        height: auto;
+        &.gray{
+          top: -46px;
+          left: -67px;
+          z-index:-2;
+        }
+        &.blue{
+          bottom: -119px;
+          right: 149px;
+          z-index: -2;
+        }
+      }
+  }
+  .star_img {
+    width: 35px;
+    height: 34px;
+  } 
+  .comma_img {
+    height: 58px;
+    width: 78px;
+    img {
+      object-fit: cover;
+    }
+  }
+  .person_detail{
+    .title{
+      line-height: 0.767;
+    }
+    .designation{
+      font-style: italic;
+    }
+  }
+  .review{
+    padding-top: 3.563rem;
+    padding-bottom: 3rem;
+    .review_text{
+      font-size: 1.75rem;
+      line-height: 1.6;
+    }
+
+  }
+}
+
+// cta
+.cta{
+  padding-top: 176px;
+  padding-bottom: 170px;
+  &.bg{
+    background-color: $bg-light-blue;
+  }
+  .title{
+    line-height: 1;
+  }
+  .rating{
+    .star_img{
+      aspect-ratio: 1;
+      width: 1.188rem;
+    }
+  }
+  .img_outer{
+    margin-left: -140px;
+    .dots{
+      aspect-ratio: 1;
+      height: auto;
+      &.blue{
+        top: -35px;
+        left: 148px;
+        z-index:-1;
+      }
+      &.orange{
+        bottom: -48px;
+        right:-64px;
+        z-index: -1;
+      }
+    }
+  }
+}
+
+    
+// shop page end

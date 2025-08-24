@@ -1,0 +1,19 @@
+@import './mixin';
+
+
+// button start
+.button_white{
+    @include button()
+}
+.button_white_fade_sm{
+    @include button(0.75rem 1.563rem,$font-size:0.825rem, $backgroundColor:rgb(255, 255, 255,0.2),$textColor: $text-white)
+}
+.button_secondary_outline{
+    @include button($textColor: $text-white,$backgroundColor: transparent,$border:1px solid $text_white)
+}
+.button_primary{
+    @include button( $backgroundColor:$text_primary,$textColor:$text_white)
+}
+.button_primary_outline{
+    @include button($textColor: $text-primary,$backgroundColor: transparent,$border:1px solid $text_primary)
+}

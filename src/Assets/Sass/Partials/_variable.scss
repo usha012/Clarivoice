@@ -1,0 +1,55 @@
+// font family
+$primary-font:'Poppins', sans-serif;
+$secondary-font: 'Roboto', sans-serif;
+
+//main colors
+$text-primary: #1e71ff;
+$text-secondary:#fba229;
+
+// gray
+$text-extralight-gray:#121212;
+$text-light-gray:rgba(43,53,62,0.7);
+$text-bluegray:#2B353E;
+
+// white
+$text-white:#ffffff;
+$text-white-20: rgba(255, 255, 255, 0.2);
+$text-white-40: rgba(255, 255, 255, 0.4);
+
+// blue
+$light-blue:rgba(30,113,255,0.1);
+$alice-blue:#E9F1FF;
+
+//bg colors
+
+//main bg colors
+$bg-primary: #1e71ff;
+$bg-secondary:#fba229;
+
+// gray
+$bg-extralight-gray:#121212;
+$bg-light-gray:#121212;
+$bg-bluegray:#2b353e;
+
+// white
+$bg-white:#ffffff;
+$bg-white-20: rgba(255, 255, 255, 0.2);
+$bg-white-40: rgba(255, 255, 255, 0.4);
+
+// blue
+$bg-alice-blue:#E9F1FF;
+$bg-light-blue:rgba(30,113,255,0.1);
+
+
+
+
+
+
+// Media Query Screen Breakpoints
+
+$breakpoint-xxl:1440px;
+$breakpoint-xl:1200px;
+$breakpoint-lg:1030px;
+$breakpoint-md:991px;
+$breakpoint-768:768px;
+$breakpoint-sm:550px;
