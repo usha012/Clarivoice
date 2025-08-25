@@ -1,3 +1,259 @@
-.abcd{
-    color:$text-primary;
+.dashboard {
+    display: flex;
+    background: $bg-d-primary;
+
+    .sidebar {
+    width: 16.67%;
+    border-right: 5px solid #E7EDF9;
+    transition: all 0.3s ease;
+
+    .logo {
+      height: 72px;
+      cursor: pointer;
+    }
+
+    .tab {
+      height: 42px;
+      padding: 10px 20px;
+      border-radius: 13px;
+      background: $bg-d-blue;
+      margin-bottom: 12px;
+      color: $text-d-blue;
+      text-align: start;
+      box-shadow: 0px 1px 2px 0px #B1BED4;
+      transition: all ease-out .5s;
+      cursor: pointer;
+
+      &:hover {
+        box-shadow: 1px 2px 7px 1px #B1BED4;
+      }
+
+      &.active {
+        background: $bg-primary;
+        color: $text-white;
+
+        svg {
+          color: $text-white;
+        }
+      }
+
+      svg {
+        margin-right: 7px;
+        height: 22px;
+        width: 22px;
+        color: $text-d-blue;
+      }
+    }
+  }
 }
+
+/* Card styling */
+.card {
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  border: none;
+}
+
+/* Table styling */
+.table {
+  background: var(--secondary-light);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.table thead {
+  background: #f1f3f6;
+}
+.table th {
+  color: var(--text-dark);
+}
+
+
+
+.main_section {
+    width: 83.33%;
+
+    .heading {
+        height: 72px;
+
+        .search_box {
+            width: 160;
+            height: 30;
+            padding: 7px 8px;
+            border-radius: 16px;
+            background: $bg-d-search;
+            margin-right: 1rem;
+
+            svg {
+                margin-right: 7px;
+            }
+
+            input {
+                outline: none;
+                border: none;
+                background: inherit;
+
+                &::placeholder {
+                    color: $text-d-search;
+                }
+            }
+        }
+
+        .btn-group {
+            background: $bg-d-filter;
+            display: flex;
+
+            button {
+                background: $bg-d-filter;
+                height: 26;
+                padding: 4px 8px;
+                gap: 10px;
+                border-radius: 2px;
+                border: none;
+                outline: none;
+                color: rgba(0,0,0,0.2);
+
+                &.active {
+                    background: $bg-d-filter-active;
+                    color: rgba(0,0,0,0.7);
+                }
+            }
+        }
+    }
+
+    .banner {
+        .background {
+            padding: 40px 20px;
+            background: $bg-primary;
+            line-height: 119%;
+            letter-spacing: -2%;
+
+            img {
+                bottom: 0;
+                right: 35px;
+            } 
+        }
+
+        .callCard {
+            box-shadow: 0px 2px 5px 0px #B1BED4;
+            background: $bg-d-primary;
+            transition: all ease-out .5s;
+
+            &:hover {
+                box-shadow: 3px 5px 8px 3px #B1BED4;
+            }
+        }
+
+        .performance {
+            .heading2 {
+                opacity: 70%;
+                font: $bg-bluegray;
+            }
+
+            .performer {
+                font-size: 12px;
+            }
+
+            .rating {
+                height: 30px;
+                width: 50px;
+                border-radius: 21px;
+                padding: 8px 3px;
+                background: #EDEEFC;
+            }
+        }
+
+        .quickActions {
+            padding: 10px 20px;
+
+            h6 {
+                font-size: 20px;
+            }
+        }
+
+        .tickets {
+            color: $text-bluegray;
+            opacity: 60%;
+            font-size: 10px;
+
+            h6 {
+                font-size: 20px;
+            }
+        }
+    }
+
+
+
+    
+
+    
+}
+
+.dot {
+    display: inline-block;
+    margin-right: 5px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+
+    &.green {
+        background: #46A805;
+    }
+
+    &.grey {
+        opacity: 70%;
+        background: #2B353EB2;
+    }
+
+    &.yellow {
+        background: #FBA229;
+    }
+}
+
+.big-badge {
+    font: $primary-font !important;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    font-size: 25px;
+}
+
+.badge {
+    &.primary{
+        background: rgba(25, 63, 191, 0.2);
+        // color: #193FBF;
+    }
+    &.success{
+        background: rgba(2, 105, 58, 0.2);
+        // color: #02693A;
+    }
+    &.danger{
+        background: rgba(187, 7, 18, 0.2);
+        // color: #BB0712;
+    }
+}
+
+
+@media (max-width: 992px) { // Tablet
+    .sidebar {
+      width: 70px;  // shrink
+      .tab {
+        padding: 10px;
+        text-align: center;
+
+        span { // hide labels
+          display: none;
+        }
+
+        svg {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 576px) { // Mobile
+
+      .tab {
+        padding: 10px !important;
+      }
+  }

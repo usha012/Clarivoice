@@ -1,0 +1,112 @@
+[
+  {
+    "id": "CL-1001",
+    "date": "8/5/17",
+    "time": "09:15",
+    "caller": "Arthur",
+    "phone": "(307) 555-0133",
+    "type": "Outgoing",
+    "status": "Calling...",
+    "duration": "2 hr 29 min",
+    "agent": "Esther"
+  },
+  {
+    "id": "CL-1002",
+    "date": "6/27/15",
+    "time": "10:05",
+    "caller": "Leslie",
+    "phone": "(249) 555-0123",
+    "type": "Incoming",
+    "status": "Declined",
+    "duration": "3 hr 9 min",
+    "agent": "Max"
+  },
+  {
+    "id": "CL-1003",
+    "date": "7/14/19",
+    "time": "14:20",
+    "caller": "Sophia",
+    "phone": "(555) 555-0154",
+    "type": "Outgoing",
+    "status": "Completed",
+    "duration": "1 hr 5 min",
+    "agent": "Rohit"
+  },
+  {
+    "id": "CL-1004",
+    "date": "5/22/18",
+    "time": "11:40",
+    "caller": "Daniel",
+    "phone": "(423) 555-0178",
+    "type": "Incoming",
+    "status": "Missed",
+    "duration": "0 min",
+    "agent": "Priya"
+  },
+  {
+    "id": "CL-1005",
+    "date": "9/11/20",
+    "time": "16:30",
+    "caller": "Emma",
+    "phone": "(512) 555-0147",
+    "type": "Outgoing",
+    "status": "Completed",
+    "duration": "45 min",
+    "agent": "Alex"
+  },
+  {
+    "id": "CL-1006",
+    "date": "3/18/21",
+    "time": "08:55",
+    "caller": "Oliver",
+    "phone": "(601) 555-0199",
+    "type": "Incoming",
+    "status": "Declined",
+    "duration": "10 min",
+    "agent": "Meera"
+  },
+  {
+    "id": "CL-1007",
+    "date": "1/29/16",
+    "time": "19:05",
+    "caller": "Ava",
+    "phone": "(720) 555-0184",
+    "type": "Outgoing",
+    "status": "Calling...",
+    "duration": "1 hr 15 min",
+    "agent": "Suresh"
+  },
+  {
+    "id": "CL-1008",
+    "date": "12/8/19",
+    "time": "13:10",
+    "caller": "James",
+    "phone": "(832) 555-0139",
+    "type": "Incoming",
+    "status": "Completed",
+    "duration": "3 hr 50 min",
+    "agent": "Fatima"
+  },
+  {
+    "id": "CL-1009",
+    "date": "10/16/22",
+    "time": "09:50",
+    "caller": "Mia",
+    "phone": "(909) 555-0175",
+    "type": "Outgoing",
+    "status": "Declined",
+    "duration": "25 min",
+    "agent": "Kiran"
+  },
+  {
+    "id": "CL-1010",
+    "date": "4/7/18",
+    "time": "18:40",
+    "caller": "Ethan",
+    "phone": "(213) 555-0188",
+    "type": "Incoming",
+    "status": "Missed",
+    "duration": "0 min",
+    "agent": "Raj"
+  }
+]
