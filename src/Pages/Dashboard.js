@@ -132,7 +132,9 @@ export default function Dashboard() {
       <div className="sidebar">
         <div className="container">
           <div className="p-4 logo">
-            <img src={Logo} className="img_fluid_100" />
+			<a href="/">
+            	<img src={Logo} className="img_fluid_100" />
+			</a>
           </div>
         </div>
         <hr className="m-0" />
