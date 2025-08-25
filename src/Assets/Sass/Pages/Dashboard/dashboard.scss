@@ -3,48 +3,80 @@
     background: $bg-d-primary;
 
     .sidebar {
-    width: 16.67%;
-    border-right: 5px solid #E7EDF9;
-    transition: all 0.3s ease;
+      width: 16.67%;
+      border-right: 5px solid #E7EDF9;
+      transition: all 0.3s ease;
 
-    .logo {
-      height: 72px;
-      cursor: pointer;
-    }
-
-    .tab {
-      height: 42px;
-      padding: 10px 20px;
-      border-radius: 13px;
-      background: $bg-d-blue;
-      margin-bottom: 12px;
-      color: $text-d-blue;
-      text-align: start;
-      box-shadow: 0px 1px 2px 0px #B1BED4;
-      transition: all ease-out .5s;
-      cursor: pointer;
-
-      &:hover {
-        box-shadow: 1px 2px 7px 1px #B1BED4;
+      .logo {
+        height: 72px;
+        cursor: pointer;
       }
 
-      &.active {
-        background: $bg-primary;
-        color: $text-white;
+      .tab {
+        height: 42px;
+        padding: 10px 20px;
+        border-radius: 13px;
+        background: $bg-d-blue;
+        margin-bottom: 12px;
+        color: $text-d-blue;
+        text-align: start;
+        box-shadow: 0px 1px 2px 0px #B1BED4;
+        transition: all ease-out .5s;
+        cursor: pointer;
+
+        &:hover {
+          box-shadow: 1px 2px 7px 1px #B1BED4;
+        }
+
+        &.active {
+          background: $bg-primary;
+          color: $text-white;
+
+          svg {
+            color: $text-white;
+          }
+        }
 
         svg {
-          color: $text-white;
+          margin-right: 7px;
+          height: 22px;
+          width: 22px;
+          color: $text-d-blue;
+        }
+      }
+      @media (max-width:$breakpoint-md) { // Tablet
+        width: 70px;  // shrink
+        .tab {
+          padding: 10px;
+          text-align: center;
+        
+
+          span { // hide labels
+            display: none;
+          }
+
+          svg {
+            margin-right: 0;
+          }
         }
       }
 
-      svg {
-        margin-right: 7px;
-        height: 22px;
-        width: 22px;
-        color: $text-d-blue;
+      @media (max-width:$breakpoint-sm) { // Mobile
+
+        .tab {
+          padding: 10px !important;
+          max-height: 42px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          svg {
+              margin-right: 0;
+              height: 50px;
+              width: 50px;
+          }
+        }
       }
     }
-  }
 }
 
 /* Card styling */
@@ -233,27 +265,4 @@
 }
 
 
-@media (max-width: 992px) { // Tablet
-    .sidebar {
-      width: 70px;  // shrink
-      .tab {
-        padding: 10px;
-        text-align: center;
 
-        span { // hide labels
-          display: none;
-        }
-
-        svg {
-          margin-right: 0;
-        }
-      }
-    }
-  }
-
-  @media (max-width: 576px) { // Mobile
-
-      .tab {
-        padding: 10px !important;
-      }
-  }

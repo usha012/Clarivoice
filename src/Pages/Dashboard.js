@@ -18,9 +18,14 @@ export default function Dashboard() {
     <div className="dashboard">
       <div className="sidebar">
         <div className="container">
-          <div className="p-4 logo">
+          <div className="p-4 logo d-none d-md-block">
 			<a href="/">
             	<img src={Logo} className="img_fluid_100" />
+			</a>
+          </div>
+          <div className="p-0 logo d-md-none">
+			<a href="/">
+            	<img src={MobileLogo} className="img_fluid_100" />
 			</a>
           </div>
         </div>
