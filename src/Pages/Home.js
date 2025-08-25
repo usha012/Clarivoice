@@ -173,7 +173,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div className='col-12'>
+                <div className='col-12 d-md-none'>
                     <div className='w-100 d-flex justify-content-between align-items-center'>
                         <div className='company_logo mb-4'>
                             <img src={CompanyLogo1} className='img_fluid_100'/>
