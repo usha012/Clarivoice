@@ -10,6 +10,7 @@ import Stats2 from "../Assets/Images/Dashboard/callRed.svg";
 import Stats3 from "../Assets/Images/Dashboard/totalTime.svg";
 import CallIcon from "../Assets/Images/Dashboard/callRed2.svg";
 import User from "../Assets/Images/Dashboard/user.png";
+import MobileLogo from "../Assets/Images/Dashboard/mobile_logo.svg";
 import callHistory from "../data/callHistory.json"
 
 import {
@@ -131,9 +132,14 @@ export default function Dashboard() {
     <div className="dashboard">
       <div className="sidebar">
         <div className="container">
-          <div className="p-4 logo">
+          <div className="p-4 logo d-none d-md-block">
 			<a href="/">
             	<img src={Logo} className="img_fluid_100" />
+			</a>
+          </div>
+          <div className="p-0 logo d-md-none">
+			<a href="/">
+            	<img src={MobileLogo} className="img_fluid_100" />
 			</a>
           </div>
         </div>
