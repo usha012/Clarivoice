@@ -222,8 +222,10 @@
       font-size: 1.75rem;
       line-height: 1.6;
     }
-
   }
+
+
+
   @media(min-width:$breakpoint-xl){
     .testimonial_img {
         max-width: 343px;
@@ -305,7 +307,7 @@
     .comma_img.mb-4{
       margin-bottom: 3rem !important;
     }
-}
+  }
 }
     
 // cta

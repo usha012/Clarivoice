@@ -1,4 +1,12 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import "swiper/css/navigation";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
 import HeroBg from "../Assets/Images/hero_Right.svg"
 import Logo from "../Assets/Images/Logo.svg"
 import CallRouting from "../Assets/Images/call_routing.svg"
@@ -10,6 +18,8 @@ import CompanyLogo3 from "../Assets/Images/infobae_logo.svg.svg"
 import CompanyLogo4 from "../Assets/Images/infoempleo_logo.svg.svg"
 import BgTestimonial from "../Assets/Images/bg_orange.svg"
 import Testimonial from "../Assets/Images/testimonial.svg"
+import Testimonial2 from "../Assets/Images/testimonial2.jpg"
+import Testimonial3 from "../Assets/Images/testimonial3.jpg"
 import TesLogo from "../Assets/Images/comma.svg"
 import Star from "../Assets/Images/star.svg"
 import DotsGray from "../Assets/Images/dots_gray.svg"
@@ -18,6 +28,52 @@ import DotsOrange from "../Assets/Images/dots_orange.svg"
 import Cta from "../Assets/Images/cta.svg"
 import logo_blue from "../Assets/Images/ClariVoice_logo_blue.svg"
 import { Link } from 'react-router-dom'
+
+
+
+// import required modules
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+const options = {
+    spaceBetween:30,
+    centeredSlides:true,
+    // autoplay: {
+    //     delay: 3500,
+    //     disableOnInteraction: false,
+    // },
+    Autoplay:false,
+    pagination: {
+        clickable: true,
+    },
+    navigation:true
+}
+
+
+const sliderContent =[
+    {
+            id:"one",
+            img:Testimonial,
+            content:`Proident consequat occaecat laboris proident aliquip tempor magna ad 
+                                    aute cillum officia irure reprehenderit. Ut non cillum adipisicing 
+                                    excepteur enim lorem laboris eu aliquip ipsum.Proident consequat 
+                                    occaecat laboris proident aliquip tempor magna ad aute cillum officia irure `
+        },
+        
+           { id:"two",
+            img:Testimonial2,
+            content:`Proident consequat occaecat laboris proident aliquip tempor magna ad 
+                                    aute cillum officia irure reprehenderit. Ut non cillum adipisicing 
+                                    excepteur enim lorem laboris eu aliquip ipsum.Proident consequat 
+                                    occaecat laboris proident aliquip tempor magna ad aute cillum officia irure `
+        },
+        
+           { id:"three",
+            img:Testimonial3,
+            content:`Proident consequat occaecat laboris proident aliquip tempor magna ad 
+                                    aute cillum officia irure reprehenderit. Ut non cillum adipisicing 
+                                    excepteur enim lorem laboris eu aliquip ipsum.Proident consequat 
+                                    occaecat laboris proident aliquip tempor magna ad aute cillum officia irure `
+        }
+]
 
 const Home = () => {
   return (
@@ -264,6 +320,73 @@ const Home = () => {
                 </div>
             </div>
         </div>
+        <Swiper {...options} modules={[Autoplay,Pagination,Navigation]} className="mySwiper">
+            {
+                sliderContent.map((e,i)=>(
+                    <SwiperSlide>   
+                        <div className='testimonial mb-41'>
+                            <div className='row align-items-center'>
+                                <div className='col-12 col-md-5'>
+                                    <div className='testimonial_img_container d-flex align-items-center justify-content-end'>
+                                        <div className='testimonial_img position-relative'>
+                                            <img src={e?.img} className='customer_img'/>
+                                            <div className='testimonial_img bg_cover position-absolute'>
+                                                <img src={BgTestimonial} className='background'/>
+                                            </div>
+                                            <div className='dots gray position-absolute'>
+                                                <img src={DotsGray} className='img_fluid_100'/>
+                                            </div>
+                                            <div className='dots blue position-absolute'>
+                                                <img src={DotsBlue} className='img_fluid_100'/>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div className='col-12 col-md-7'>
+                                    <div className='review'>
+                                        <div className='comma_img mb-4'>
+                                            <img src={TesLogo} className='img_fluid_100'/>
+                                        </div>
+
+                                        <p className='mb-3 text-center text-md-start review_text'>
+                                            {e?.content}
+                                        </p>
+                                        <div className='rating d-flex align-items-center justify-content-center justify-content-md-start mb-8'>
+                                            <div className='star_img me-4'>
+                                                <img src={Star} className='img_fluid_100'/>
+                                            </div>
+                                            <div className='star_img me-4'>
+                                                <img src={Star} className='img_fluid_100'/>
+                                            </div>
+                                            <div className='star_img me-4'>
+                                                <img src={Star} className='img_fluid_100'/>
+                                            </div>
+                                            <div className='star_img me-4'>
+                                                <img src={Star} className='img_fluid_100'/>
+                                            </div>
+                                            <div className='star_img'>
+                                                <img src={Star} className='img_fluid_100'/>
+                                            </div>
+                                        </div>
+                                        <div className='person_detail text-center text-md-start'>
+                                            <p className='mb-2 font_primary fs_25 title text_bluegray'>Rohit Kumar</p>
+                                            <p className='mb-0 font-primary fs_14 fw_300 designation'>Co Founder</p>
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                    
+
+                ))
+            }
+        </Swiper>
+        
 
         
     </div>
