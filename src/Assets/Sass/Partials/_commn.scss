@@ -164,6 +164,10 @@
   .title{
     line-height:1.217;
   }
+  .testimonial_img_container{
+    margin-top: 3rem;
+    margin-bottom: 8rem;
+  }
   .testimonial_img {
       width: 100%;              /* full width of parent */
       max-width: 396px;         /* won’t stretch bigger than 396px */
@@ -216,15 +220,23 @@
     }
   }
   .review{
-    padding-top: 3.563rem;
+    padding-top: 1.8rem;
     padding-bottom: 3rem;
     .review_text{
       font-size: 1.75rem;
       line-height: 1.6;
     }
   }
-
-
+  .swiper-pagination-bullet{
+    height: 15px;
+    width: 15px;
+  }
+  .swiper-pagination-bullet-active{
+    background-color: $bg_secondary;
+  }
+  .swiper-wrapper{
+    margin-bottom: 2rem;
+  }
 
   @media(min-width:$breakpoint-xl){
     .testimonial_img {
@@ -238,6 +250,110 @@
       }
     .mb-41 {
         margin-bottom: 9rem !important;
+    }
+  }
+
+
+
+  @media(min-width:$breakpoint-lg){
+    .testimonial_img_container{
+      margin-top: 4rem;
+    }
+    .testimonial_img {
+        width: 100%;
+        max-width: 295px;
+        // max-width: 283px;
+        aspect-ratio: 137 / 171;
+        margin-right: 2.438rem;
+       .bg_cover {
+        left: -41px;
+        z-index: -1;
+        top: 33px;
+      }
+      .dots{
+        &.blue {
+          right: 114px;
+          bottom: -86px;
+        }
+        &.gray {
+          top: -57px;
+        }
+      }
+    }
+  }
+
+  @media(min-width:$breakpoint-sm){
+    .testimonial_img {
+      width: 220px;
+      max-width: 293px;
+      aspect-ratio: 382 / 460;
+      margin-right: 2.438rem;
+      .bg_cover {
+        left: -41px;
+        z-index: -1;
+        top: 33px;
+      }
+      .dots{
+        &.blue {
+        bottom: -75px;
+        right: 79px;
+        z-index: -2;
+        }
+        &.gray {
+            top: -46px;
+            left: -67px;
+            z-index: -2;
+        }
+      }
+    }
+  } 
+  // @media(max-width:991px){
+  // .swiper-slide{
+  //     width: 705px !important;
+  //   }
+  //  }
+  @media(min-width:$breakpoint-md){
+    .testimonial_img {
+      width: 100%;
+      max-width: 294px;
+      aspect-ratio: 118 / 157;
+      margin-right: 2.438rem;
+      .bg_cover {
+        left: -41px;
+        z-index: -1;
+        top: 33px;
+      }
+      .dots{
+        &.blue {
+          bottom: -86px;
+          right: 71px;
+          z-index: -2;
+        }
+        &.gray {
+            top: -58px;
+            left: -35px;
+            z-index: -2;
+        }
+      }
+    }
+    .fs_53 {
+      font-size: 1.788rem;
+    }
+    .comma_img {
+      height: 53px;
+      width: 71px;
+    }
+    .review{
+      .review_text {
+       font-size: 1rem;
+     }
+    }
+    .star_img {
+      width: 30px;
+      height: 30px;
+    }
+    .mb-41 {
+      margin-bottom: 7rem !important;
     }
   }
   @media(min-width:$breakpoint-lg){
@@ -265,27 +381,41 @@
     }
       
   }
-  @media(min-width:$breakpoint-md){
-    .fs_53 {
-      font-size: 1.788rem;
+  @media(min-width:$breakpoint-xl){
+    .testimonial_img {
+      aspect-ratio: 476 / 558;
+      max-width: 370px;
     }
-    .comma_img {
-      height: 53px;
-      width: 71px;
+  }
+  @media(min-width:$breakpoint-1400){
+    .testimonial_img {
+      aspect-ratio: 476 / 558;
+      max-width: 444px;
+    }
+  }
+  @media(min-width:$breakpoint-xxl){
+    .testimonial_img_container {
+      margin-top: 5rem;
+    }
+    .testimonial_img {
+      aspect-ratio: 476 / 558;
+      max-width: 376px;
+      .dots{
+        &.blue {
+        right: 114px;
+        }
+        &.gray {
+          top: -57px;
+        }
+      }
     }
     .review{
       .review_text {
-       font-size: 1rem;
-     }
-    }
-    .star_img {
-      width: 30px;
-      height: 30px;
-    }
-    .mb-41 {
-      margin-bottom: 7rem !important;
-    }
+        font-size: 1.75rem;
+      }
+    } 
   }
+
   @media(max-width:$breakpoint-sm){
     .mb-41 {
       margin-bottom: 5rem !important;
@@ -308,7 +438,15 @@
       margin-bottom: 3rem !important;
     }
   }
+
 }
+
+  
+
+// .swiper-pagination-bullet{
+//   height: 20px !important;
+//   width: 20px !important;
+// }
     
 // cta
 .cta{

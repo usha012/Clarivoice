@@ -1,11 +1,15 @@
 import React, { useRef, useState } from 'react'
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+// import required modules
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import "swiper/css/navigation";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
+
+
 
 import HeroBg from "../Assets/Images/hero_Right.svg"
 import Logo from "../Assets/Images/Logo.svg"
@@ -31,10 +35,10 @@ import { Link } from 'react-router-dom'
 
 
 
-// import required modules
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+
 const options = {
-    spaceBetween:30,
+    spaceBetween:70,
+    slidesPerView:1,
     centeredSlides:true,
     // autoplay: {
     //     delay: 3500,
@@ -44,7 +48,21 @@ const options = {
     pagination: {
         clickable: true,
     },
-    navigation:true
+    // breakpoints:{
+    //     640: {
+    //     slidesPerView: 1,
+    //     spaceBetween: 20,
+    //     },
+    //     768: {
+    //     slidesPerView: 1,
+    //     spaceBetween: 10,
+    //     },
+    //     1024: {
+    //     slidesPerView: 1,
+    //     spaceBetween: 50,
+    //     },
+    // },
+    navigation:false
 }
 
 
@@ -74,6 +92,12 @@ const sliderContent =[
                                     occaecat laboris proident aliquip tempor magna ad aute cillum officia irure `
         }
 ]
+    // const swiper = new Swiper('.swiper', {
+    // pagination: {
+    //     el: '.swiper-pagination',
+    //     clickable: true, 
+    // },
+    // });
 
 const Home = () => {
   return (
@@ -260,71 +284,13 @@ const Home = () => {
                         Aenean commodo <br/>ligula eget dolor. Aenean massa. Cum sociis natoque.
                     </p>
                 </div>
-
-
             </div>
-            <div className='row align-items-center'>
-                <div className='col-12 col-md-5'>
-                    <div className='testimonial_img_container d-flex align-items-center justify-content-end'>
-                        <div className='testimonial_img position-relative'>
-                            <img src={Testimonial} className='customer_img'/>
-                            <div className='testimonial_img bg_cover position-absolute'>
-                                <img src={BgTestimonial} className='background'/>
-                            </div>
-                            <div className='dots gray position-absolute'>
-                                <img src={DotsGray} className='img_fluid_100'/>
-                            </div>
-                            <div className='dots blue position-absolute'>
-                                <img src={DotsBlue} className='img_fluid_100'/>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div className='col-12 col-md-7'>
-                    <div className='review'>
-                        <div className='comma_img mb-4'>
-                            <img src={TesLogo} className='img_fluid_100'/>
-                        </div>
-
-                        <p className='mb-3 text-center text-md-start review_text'>Proident consequat occaecat laboris proident aliquip tempor magna ad 
-                            aute cillum officia irure reprehenderit. Ut non cillum adipisicing 
-                            excepteur enim lorem laboris eu aliquip ipsum.Proident consequat 
-                            occaecat laboris proident aliquip tempor magna ad aute cillum officia irure 
-                        </p>
-                        <div className='rating d-flex align-items-center justify-content-center justify-content-md-start mb-8'>
-                            <div className='star_img me-4'>
-                                <img src={Star} className='img_fluid_100'/>
-                            </div>
-                            <div className='star_img me-4'>
-                                <img src={Star} className='img_fluid_100'/>
-                            </div>
-                            <div className='star_img me-4'>
-                                <img src={Star} className='img_fluid_100'/>
-                            </div>
-                            <div className='star_img me-4'>
-                                <img src={Star} className='img_fluid_100'/>
-                            </div>
-                            <div className='star_img'>
-                                <img src={Star} className='img_fluid_100'/>
-                            </div>
-                        </div>
-                        <div className='person_detail text-center text-md-start'>
-                            <p className='mb-2 font_primary fs_25 title text_bluegray'>Rohit Kumar</p>
-                            <p className='mb-0 font-primary fs_14 fw_300 designation'>Co Founder</p>
-                        </div>
-
-                    </div>
 
 
-                </div>
-            </div>
-        </div>
-        <Swiper {...options} modules={[Autoplay,Pagination,Navigation]} className="mySwiper">
-            {
-                sliderContent.map((e,i)=>(
-                    <SwiperSlide>   
-                        <div className='testimonial mb-41'>
+            <Swiper {...options} modules={[Autoplay,Pagination,Navigation]} className="mySwiper">
+                {
+                    sliderContent.map((e,i)=>(
+                        <SwiperSlide>   
                             <div className='row align-items-center'>
                                 <div className='col-12 col-md-5'>
                                     <div className='testimonial_img_container d-flex align-items-center justify-content-end'>
@@ -340,15 +306,14 @@ const Home = () => {
                                                 <img src={DotsBlue} className='img_fluid_100'/>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
+
                                 <div className='col-12 col-md-7'>
                                     <div className='review'>
                                         <div className='comma_img mb-4'>
                                             <img src={TesLogo} className='img_fluid_100'/>
                                         </div>
-
                                         <p className='mb-3 text-center text-md-start review_text'>
                                             {e?.content}
                                         </p>
@@ -373,19 +338,21 @@ const Home = () => {
                                             <p className='mb-2 font_primary fs_25 title text_bluegray'>Rohit Kumar</p>
                                             <p className='mb-0 font-primary fs_14 fw_300 designation'>Co Founder</p>
                                         </div>
-
                                     </div>
-
-
                                 </div>
                             </div>
-                        </div>
-                    </SwiperSlide>
+                        </SwiperSlide>
+                    ))
+                }
+            </Swiper>
+        </div>
+
+
+
+
+     
                     
 
-                ))
-            }
-        </Swiper>
         
 
         
